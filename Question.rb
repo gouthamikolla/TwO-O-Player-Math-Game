@@ -8,7 +8,7 @@ attr_accessor :num1 , :num2
   end
 
   def generate_question
-    "What does #{self.num1} plus #{self.num2} equal?"
+    ": What does #{self.num1} plus #{self.num2} equal?"
   end
 
 end

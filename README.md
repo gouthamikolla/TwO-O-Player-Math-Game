@@ -12,4 +12,4 @@ Question :
 
 Game :
       State : current_player, player1, player2, game_over, winner
-      Behavior: change_current_player, start, ask , end
+      Behavior: change_current_player, start, end_game
