@@ -1,10 +1,10 @@
 class Player
   TOTAL_LIVES = 3
-  attr_accessor :name , lives
+  attr_accessor :name , :lives
 
   def initialize(name)
-    @name = name
-    @lives = TOTAL_LIVES
+    self.name = name
+    self.lives = TOTAL_LIVES
   end
 
   def update_lives
