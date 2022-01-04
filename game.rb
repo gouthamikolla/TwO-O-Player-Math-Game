@@ -12,6 +12,10 @@ class Game
     self.current_player = self.player1
   end
 
+  def change_current_player
+     self.current_player = (self.current_player == self.player1) ? self.player2 : self.player1
+   end
+
   def start
       player = self.current_player
       question = Question.new
@@ -19,5 +23,15 @@ class Game
       print '>'
       answer = gets.chomp.to_i
       puts answer
+
+      if (answer == (question.num1 + question.num2))
+        puts 'YES! You are correct.'
+      else
+        player.update_lives
+        puts 'Seriously? No!'
+      end
+      puts "P1: #{self.player1.lives}/3 vs P2: #{self.player2.lives}/3"
+      change_current_player
+      puts '-----NEW TURN-----'
     end
 end
